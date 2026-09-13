@@ -3,55 +3,106 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sucre Whisk Ordering</title>
+  <meta name="theme-color" content="#f8dbe7" />
+  <title>Sucre Whisk | Gelato & More</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <header class="topbar">
-    <div><p class="eyebrow">HOME SWEET BAKERY</p><h1>Sucre Whisk</h1></div>
-    <button id="cartButton" class="cart-button">Cart <span id="cartCount">0</span></button>
+    <a class="brand" href="#" aria-label="Sucre Whisk home">
+      <div class="brand-mark">♡</div>
+      <div>
+        <p class="eyebrow">HOME SWEET BAKERY</p>
+        <h1>Sucre Whisk</h1>
+      </div>
+    </a>
+    <button id="cartButton" class="cart-button">Bag <span id="cartCount">0</span></button>
   </header>
+
   <main class="container">
     <section id="shopView">
       <section class="hero">
-        <div>
-          <p class="eyebrow">ALL THINGS SWEET & MORE ♡</p>
-          <h2>Small-batch treats for sweeter days.</h2>
-          <p>Order gelato, granola and drinks, choose a pickup time, and check out online.</p>
-          <a href="#menu" class="primary-button">Order now</a>
+        <div class="hero-copy">
+          <p class="eyebrow">GELATO • GRANOLA • DRINKS</p>
+          <h2>All things sweet,<br />made with love.</h2>
+          <p>Small-batch treats from our home sweet bakery. Choose your favourites, select a pickup time and we’ll have them ready for you.</p>
+          <div class="hero-actions">
+            <a href="#menu" class="primary-button">Shop the menu</a>
+            <span class="launch-pill">Launching 4 Oct 2026</span>
+          </div>
         </div>
-        <div class="hero-emoji">🍨</div>
+        <div class="hero-card" aria-hidden="true">
+          <div class="bow">୨୧</div>
+          <div class="hero-monogram">SW</div>
+          <p>Gelato & More</p>
+        </div>
       </section>
-      <section class="pickup-banner"><strong>Pickup:</strong> 468A Fernvale Link</section>
+
+      <section class="pickup-banner">
+        <span class="pickup-icon">♡</span>
+        <div><strong>Pickup at 468A Fernvale Link</strong><span>Choose your preferred date and time at checkout.</span></div>
+      </section>
+
       <section id="menu" class="menu-section">
         <div class="section-header">
-          <div><p class="eyebrow">MENU</p><h3>Choose your favourites</h3></div>
+          <div>
+            <p class="eyebrow">OUR MENU</p>
+            <h3>Choose your favourites</h3>
+            <p class="section-copy">Freshly made in small batches. Availability may change as items sell out.</p>
+          </div>
           <div id="categoryTabs" class="tabs"></div>
         </div>
         <div id="productGrid" class="product-grid"></div>
       </section>
     </section>
+
     <section id="cartView" class="hidden">
       <button id="backButton" class="text-button">← Continue shopping</button>
       <div class="checkout-grid">
-        <section><p class="eyebrow">YOUR ORDER</p><h3>Cart</h3><div id="cartItems" class="cart-items"></div></section>
+        <section>
+          <p class="eyebrow">YOUR ORDER</p>
+          <h3>Your bag</h3>
+          <div id="cartItems" class="cart-items"></div>
+        </section>
+
         <aside class="summary-card">
+          <p class="eyebrow">PICKUP</p>
           <h4>Pickup details</h4>
           <label>Pickup date<input id="pickupDate" type="date" min="2026-10-04" value="2026-10-04" /></label>
           <label>Pickup time<select id="pickupTime"><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option></select></label>
           <label>Name<input id="customerName" type="text" placeholder="Your name" /></label>
           <label>Mobile number<input id="customerPhone" type="tel" placeholder="+65 8XXX XXXX" /></label>
-          <div class="totals"><div><span>Subtotal</span><strong id="subtotal">$0.00</strong></div><div><span>GST (9%)</span><strong id="gst">$0.00</strong></div><div class="grand-total"><span>Total</span><strong id="grandTotal">$0.00</strong></div></div>
-          <button id="payButton" class="primary-button full">Pay online</button>
-          <p class="note">Demo checkout only. Connect Stripe, HitPay, Adyen or PayNow for real payments.</p>
+
+          <div class="totals">
+            <div><span>Subtotal</span><strong id="subtotal">$0.00</strong></div>
+            <div><span>GST (9%)</span><strong id="gst">$0.00</strong></div>
+            <div class="grand-total"><span>Total</span><strong id="grandTotal">$0.00</strong></div>
+          </div>
+
+          <button id="payButton" class="primary-button full">Continue to checkout</button>
+          <p class="note">Online payment is still in demo mode while the payment gateway is being set up.</p>
         </aside>
       </div>
     </section>
+
     <section id="successView" class="hidden success-section">
-      <div class="success-card"><div class="heart">♡</div><p class="eyebrow">ORDER CONFIRMED</p><h2>Thank you!</h2><p>Your Sucre Whisk order has been reserved for pickup.</p><div id="orderSummary" class="order-summary"></div><button id="newOrderButton" class="primary-button">Place another order</button></div>
+      <div class="success-card">
+        <div class="heart">♡</div>
+        <p class="eyebrow">ORDER RECEIVED</p>
+        <h2>Thank you!</h2>
+        <p>Your Sucre Whisk order has been reserved for pickup.</p>
+        <div id="orderSummary" class="order-summary"></div>
+        <button id="newOrderButton" class="primary-button">Place another order</button>
+      </div>
     </section>
   </main>
-  <footer><span>Sucre Whisk</span><span>All things sweet & more ♡</span></footer>
+
+  <footer>
+    <div><strong>Sucre Whisk</strong><span>Homemade • Made with love • Made for you</span></div>
+    <span>All things sweet & more ♡</span>
+  </footer>
+
+  <script src="products.js"></script>
   <script src="app.js"></script>
 </body>
 </html>
