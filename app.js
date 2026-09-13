@@ -1,5 +1,5 @@
 const products=[
-{id:1,name:"Strawberry Dream",category:"Gelato",price:7.5,emoji:"🍓",desc:"Creamy strawberry gelato with real fruit."},
+{id:1,name:"Taro Gelato",category:"Gelato",price:7.5,emoji:"🍠",desc:"Creamy taro gelato with a smooth, delicately sweet flavour."},
 {id:2,name:"Pistachio",category:"Gelato",price:7.5,emoji:"💚",desc:"Smooth, nutty and small-batch."},
 {id:3,name:"Vanilla Bean",category:"Gelato",price:7.5,emoji:"🍦",desc:"Classic vanilla with fragrant bean specks."},
 {id:4,name:"Dark Chocolate",category:"Gelato",price:7.5,emoji:"🍫",desc:"Rich cocoa with a deep chocolate finish."},
