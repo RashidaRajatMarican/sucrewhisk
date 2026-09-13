@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sucre Whisk Ordering</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="topbar">
+    <div><p class="eyebrow">HOME SWEET BAKERY</p><h1>Sucre Whisk</h1></div>
+    <button id="cartButton" class="cart-button">Cart <span id="cartCount">0</span></button>
+  </header>
+  <main class="container">
+    <section id="shopView">
+      <section class="hero">
+        <div>
+          <p class="eyebrow">ALL THINGS SWEET & MORE ♡</p>
+          <h2>Small-batch treats for sweeter days.</h2>
+          <p>Order gelato, granola and drinks, choose a pickup time, and check out online.</p>
+          <a href="#menu" class="primary-button">Order now</a>
+        </div>
+        <div class="hero-emoji">🍨</div>
+      </section>
+      <section class="pickup-banner"><strong>Pickup:</strong> 468A Fernvale Link</section>
+      <section id="menu" class="menu-section">
+        <div class="section-header">
+          <div><p class="eyebrow">MENU</p><h3>Choose your favourites</h3></div>
+          <div id="categoryTabs" class="tabs"></div>
+        </div>
+        <div id="productGrid" class="product-grid"></div>
+      </section>
+    </section>
+    <section id="cartView" class="hidden">
+      <button id="backButton" class="text-button">← Continue shopping</button>
+      <div class="checkout-grid">
+        <section><p class="eyebrow">YOUR ORDER</p><h3>Cart</h3><div id="cartItems" class="cart-items"></div></section>
+        <aside class="summary-card">
+          <h4>Pickup details</h4>
+          <label>Pickup date<input id="pickupDate" type="date" min="2026-10-04" value="2026-10-04" /></label>
+          <label>Pickup time<select id="pickupTime"><option>10:00 AM</option><option>11:00 AM</option><option>12:00 PM</option><option>1:00 PM</option><option>2:00 PM</option><option>3:00 PM</option><option>4:00 PM</option><option>5:00 PM</option></select></label>
+          <label>Name<input id="customerName" type="text" placeholder="Your name" /></label>
+          <label>Mobile number<input id="customerPhone" type="tel" placeholder="+65 8XXX XXXX" /></label>
+          <div class="totals"><div><span>Subtotal</span><strong id="subtotal">$0.00</strong></div><div><span>GST (9%)</span><strong id="gst">$0.00</strong></div><div class="grand-total"><span>Total</span><strong id="grandTotal">$0.00</strong></div></div>
+          <button id="payButton" class="primary-button full">Pay online</button>
+          <p class="note">Demo checkout only. Connect Stripe, HitPay, Adyen or PayNow for real payments.</p>
+        </aside>
+      </div>
+    </section>
+    <section id="successView" class="hidden success-section">
+      <div class="success-card"><div class="heart">♡</div><p class="eyebrow">ORDER CONFIRMED</p><h2>Thank you!</h2><p>Your Sucre Whisk order has been reserved for pickup.</p><div id="orderSummary" class="order-summary"></div><button id="newOrderButton" class="primary-button">Place another order</button></div>
+    </section>
+  </main>
+  <footer><span>Sucre Whisk</span><span>All things sweet & more ♡</span></footer>
+  <script src="app.js"></script>
+</body>
+</html>
